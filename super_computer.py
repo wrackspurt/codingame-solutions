@@ -19,7 +19,7 @@ def activity_selector(activities):
         previous_finish = activities[previous_index][1]  # keeping the ending day of the previous activity
         current_start = activities[i][0]  # keeping the starting day of the current activity
         if current_start > previous_finish:  # comparing the ending of previous and the starting of current activities
-            s.append(i)
+            s.append(activities[i])
             previous_index = i
     return len(s)  # returning the number of activities that do not clash with each other
 
